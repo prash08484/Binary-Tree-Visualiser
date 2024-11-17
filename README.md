@@ -1,4 +1,5 @@
 # Binary Tree Visualizer 🌳
+ Deployment Link: https://binary-tree-visualiser-ds-algo.vercel.app/
 
 **Binary Tree Visualizer** is an interactive tool designed to simplify the understanding and representation of binary trees, binary search trees (BST), and max heaps. This project provides an intuitive platform to explore tree structures, perform operations, and visualize traversal outputs, making it an invaluable resource for learning and teaching data structures.
 
@@ -17,6 +18,4 @@
 2. Navigate to project the reposiory:
    ```bash
    cd Binary-Tree-Visualiser   
-3.  Navigate to index.html:
-```bash 
-index.html
+3.  Navigate to index.html
