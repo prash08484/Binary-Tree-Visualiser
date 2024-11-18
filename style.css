@@ -21,14 +21,10 @@ label  {
 
 #title {
   
-  background-color: rgb(61, 61, 61);
-  font-size: 1.1em;
-  color: white;
   
   border: none;
   border-radius: 3px;
   font-weight: normal;
-  font-size: 1.75em;
 
 }
 
@@ -62,7 +58,6 @@ header {
 
 button {
   margin-top: 1em;
-  background-color: rgb(8, 74, 3);
   font-size: 1.1em;
   color: white;
   padding: .25em .5em .25em .5em;
@@ -95,3 +90,23 @@ rect:hover, circle:hover, text.circle:hover, text.rect:hover {
   top: 10px;
   left: 0;
 }
+
+.center-button {
+  text-align: center;
+}
+
+.button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px;
+  color: white;
+  background-color: #1b1e1f; /* LinkedIn blue */
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #299d82;
+} 
