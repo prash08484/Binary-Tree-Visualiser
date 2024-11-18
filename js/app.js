@@ -1,8 +1,7 @@
 let input;
 
 function reset() {
-  d3.selectAll('svg').remove();
-}
+  d3.selectAll('svg').remove(); }
 
 function treeAndArray() {
   reset();
@@ -48,6 +47,7 @@ function createBinarySearchTree() {
 }
 
 //default values
+input = [10, 20, 60, 30, 70, 40, 50];
 let inputTest = document.getElementById("array-input")
 inputTest.value = input;
 createBinaryTreeAndArr(input);
