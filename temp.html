@@ -1,4 +1,4 @@
-<!-- temporary mid html and css  -->
+<!-- try final html + css  -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,108 +16,122 @@
       }
 
       body {
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.6;
-        background-color: #f5f5f5;
-        color: #333;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: #fff;
         padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        min-height: 100vh;
       }
 
       /* Header Section */
       header {
-        background-color: #4caf50;
-        color: white;
-        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        width: 90%;
+        max-width: 800px;
         text-align: center;
-        padding: 1em 0;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         margin-bottom: 20px;
+        animation: fadeIn 1s ease-in-out;
       }
 
       header #title {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #ffdf6c;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
       }
 
       header label {
         font-size: 1.2rem;
         font-weight: bold;
         display: block;
-        margin: 10px 0;
+        margin: 15px 0;
+        color: #f3f3f3;
       }
 
       header input {
         width: 80%;
         max-width: 500px;
-        padding: 10px;
+        padding: 10px 15px;
         font-size: 1rem;
-        border: 2px solid #ddd;
-        border-radius: 5px;
+        border: none;
+        border-radius: 8px;
         outline: none;
-        transition: border 0.3s ease;
+        background: rgba(255, 255, 255, 0.8);
+        color: #333;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       }
 
       header input:focus {
-        border-color: #4caf50;
+        background: rgba(255, 255, 255, 1);
+        transform: scale(1.05);
       }
 
       header #options {
-        margin-top: 15px;
+        margin-top: 20px;
       }
 
       header button {
-        background-color: #00695c;
-        color: white;
+        background: #ff6f61;
         font-size: 1rem;
+        color: #fff;
         margin: 10px 5px;
         padding: 10px 20px;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
         cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+        transition: all 0.3s ease;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
       }
 
       header button:hover {
-        background-color: #004d40;
-        transform: translateY(-2px);
+        background: #ff3b30;
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
       }
 
       /* Blurb Section */
       #blurb {
-        background-color: #ffffff;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
         text-align: center;
         margin: 20px auto;
         padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 600px;
-        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        max-width: 700px;
+        animation: slideUp 1.2s ease-out;
       }
 
       #visual-title {
         font-weight: bold;
         font-size: 1.5rem;
         margin-bottom: 10px;
-        color: #333;
+        color: #ffe59a;
       }
 
       #instructions {
         font-size: 1rem;
-        color: #666;
+        color: #eee;
       }
 
-      /* Visualization Containers */
-      #binary-tree,
+      /* Visualization Areas */ 
       #array-visual {
-        margin-top: 20px;
-        max-width: 100%;
-        overflow-x: auto;
-        padding: 10px;
+        margin-top: 30px;
+        max-width: 90%;
+        width: 700px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        animation: zoomIn 1s ease;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
       }
 
       .svg-container {
@@ -141,9 +155,11 @@
       text.circle:hover,
       text.rect:hover {
         cursor: pointer;
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
       }
 
-      /* Center Button */
+      /* Connect Button */
       .center-button {
         text-align: center;
         margin-top: 30px;
@@ -151,23 +167,57 @@
 
       .button {
         padding: 15px 25px;
-        font-size: 1rem;
+        font-size: 1.1rem;
         color: white;
-        background-color: #0c71d0;
+        background-color: #ff6f61;
         text-decoration: none;
-        border-radius: 8px;
-        transition: background-color 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
       }
 
       .button:hover {
-        background-color: #0a678c;
+        background-color: #ff3b30;
+        transform: translateY(-3px) scale(1.1);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes zoomIn {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
       }
 
       /* Responsive Design */
       @media (max-width: 768px) {
         header input {
-          width: 90%;
+          width: 100%;
         }
 
         header button {
@@ -176,12 +226,18 @@
         }
 
         #blurb {
-          width: 90%;
+          width: 100%;
           margin: 10px auto;
         }
 
         #visual-title {
           font-size: 1.2rem;
+        }
+
+        #binary-tree,
+        #array-visual {
+          width: 100%;
+          padding: 15px;
         }
       }
     </style>
